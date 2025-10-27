@@ -1,0 +1,83 @@
+== Dependency/Build Files & Folders ==
+
+Node dependencies
+
+/node_modules
+
+Build artifacts and production files
+
+/build
+/dist
+/out
+/public/build
+
+Development/Bundler caches (e.g., Webpack, Vite, Next.js, Parcel)
+
+.cache
+.parcel-cache
+.next
+.nuxt
+
+Output for storybook build
+
+/storybook-static
+
+Typescript cache files
+
+*.tsbuildinfo
+
+== Configuration & Credentials ==
+
+Environment variables
+
+DO NOT commit sensitive API keys or secrets!
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+Local config files
+
+.firebase/
+.vscode/
+
+== Logs and Test Reports ==
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+test-reports/
+
+Coverage directory used by testing tools like Jest
+
+/coverage
+
+== OS Generated Files ==
+
+.DS_Store
+Thumbs.db
+
+== IDE and Editor Files ==
+
+VS Code (if you haven't included .vscode/ above)
+
+.vscode/*
+
+!.vscode/settings.json
+
+!.vscode/tasks.json
+
+!.vscode/launch.json
+
+!.vscode/extensions.json
+
+JetBrains IDEs (WebStorm, IntelliJ)
+
+.idea
+
+Custom React/Webpack/etc. configs that are only local
+
+config/
