@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRecipes } from "../hooks/useRecipes";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [search, setSearch] = useState("chicken");
@@ -8,7 +9,7 @@ const Home = () => {
   return (
     <div className="container mx-auto p-6">
       <header className="flex justify-between items-center mb-10">
-        <h1 className="text-4xl font-extrabold text-orange-600">Food Ninja</h1>
+        <h1 className="text-4xl font-extrabold text-orange-600">Easy Meal</h1>
         <div className="flex gap-2">
           <input
             type="text"
@@ -38,9 +39,11 @@ const Home = () => {
             <div className="p-4">
               <h2 className="text-xl font-bold mb-2">{recipe.strMeal}</h2>
               <p className="text-gray-500 italic mb-4">{recipe.strCategory}</p>
-              <button className="w-full bg-orange-500 text-white font-bold py-2 rounded-lg hover:bg-orange-600">
-                View Recipe
-              </button>
+              <Link to={`/recipe/${recipe.idMeal}`}>
+                <button className="w-full bg-orange-500 text-white font-bold py-2 rounded-lg hover:bg-orange-600">
+                  View Recipe
+                </button>
+              </Link>
             </div>
           </div>
         ))}
