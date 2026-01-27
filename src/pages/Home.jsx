@@ -11,11 +11,11 @@ const Home = () => {
       <header className="flex justify-between items-center mb-10">
         <h1 className="text-4xl font-extrabold text-orange-600">Easy Meal</h1>
         <div className="flex gap-2">
-          <input
-            type="text"
-            placeholder="Search recipes..."
-            className="border-2 border-gray-300 rounded-lg px-4 py-2 focus:border-orange-500 outline-none"
-            onKeyDown={(e) => e.key === "Enter" && setSearch(e.target.value)}
+          <input 
+            type="text" 
+            placeholder="Search (e.g. Pasta)..." 
+            className="p-2 border rounded"
+            onChange={(e) => setSearch(e.target.value)} // Updates the search state instantly
           />
         </div>
       </header>
